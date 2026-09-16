@@ -1,0 +1,35 @@
+# ==========================================
+# 1. SISTEMA OPERATIVO Y TEMPORALES
+# ==========================================
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# ==========================================
+# 2. BLUEJ / JAVA (Carpeta: BlueJ/)
+# ==========================================
+*.class
+*.ctxt
+BlueJ/*.ctxt
+BlueJ/*.class
+doc/
+
+# ==========================================
+# 3. C# / VS CODE / .NET (Carpeta: VS_Code/)
+# ==========================================
+bin/
+obj/
+VS_Code/bin/
+VS_Code/obj/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ==========================================
+# 4. DRAW.IO (Carpeta: Draw.io/)
+# ==========================================
+*.drawio.bkp
+*.dtmp

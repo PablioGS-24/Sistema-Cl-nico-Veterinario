@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="c-c6_jRSCJc-SEAceh_f">
+    <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys_box" parent="1" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=30;horizontal=1;collapsible=0;container=1;dropTarget=0;recursiveResize=0;expand=0;fontStyle=1;fontSize=14;fillColor=#f8f9fa;fontColor=#212529;strokeColor=#495057;" value="Sistema de Control Clínico Veterinario" vertex="1">
+          <mxGeometry height="740" width="580" x="250" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uc01" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1e88e5;fontStyle=1;" value="CU-01: Gestionar Expediente Clínico&#xa;(Mascota, Dueño, Alergias)" vertex="1">
+          <mxGeometry height="55" width="230" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc02" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1e88e5;fontStyle=1;" value="CU-02: Agendar y Controlar Citas" vertex="1">
+          <mxGeometry height="50" width="230" x="30" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc03" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#43a047;fontStyle=1;" value="CU-03: Registrar Consulta General&#xa;y Diagnóstico" vertex="1">
+          <mxGeometry height="55" width="230" x="30" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uc04" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#43a047;fontStyle=1;" value="CU-04: Programar y Ejecutar&#xa;Intervención Quirúrgica" vertex="1">
+          <mxGeometry height="55" width="220" x="320" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uc05" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#fb8c00;fontStyle=1;" value="CU-05: Ordenar y Procesar&#xa;Pruebas de Laboratorio" vertex="1">
+          <mxGeometry height="55" width="220" x="320" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uc06" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#7cb342;fontStyle=1;" value="CU-06: Prescribir y Descontar&#xa;Medicamentos de Inventario" vertex="1">
+          <mxGeometry height="55" width="230" x="30" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="uc07" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#43a047;fontStyle=1;" value="CU-07: Monitorear Cuidados Intensivos&#xa;y Hospitalización" vertex="1">
+          <mxGeometry height="55" width="230" x="90" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="uc08" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="CU-08: Emitir Alta Médica y&#xa;Facturación Consolidada" vertex="1">
+          <mxGeometry height="55" width="230" x="30" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="uc09" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="CU-09: Validar Esquiema Vacunal&#xa;y Control Sanitario" vertex="1">
+          <mxGeometry height="55" width="220" x="320" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="uc10" parent="sys_box" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#8e24aa;fontStyle=1;" value="CU-10: Auditoría y Generación&#xa;de KPIs Clínico-Financieros" vertex="1">
+          <mxGeometry height="55" width="240" x="180" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ext_cirugia" edge="1" parent="sys_box" source="uc04" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="uc03" value="&lt;&lt;extends&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_inc_lab" edge="1" parent="sys_box" source="uc04" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="uc05" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_inc_farmacia" edge="1" parent="sys_box" source="uc03" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="uc06" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_inc_vacuna" edge="1" parent="sys_box" source="uc08" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="uc09" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act_recepcion" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e1f5fe;strokeColor=#0288d1;fontStyle=1;" value="Recepcionista /&#xa;Atención al Cliente" vertex="1">
+          <mxGeometry height="85" width="45" x="70" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="act_veterinario" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e8f5e9;strokeColor=#388e3c;fontStyle=1;" value="Médico Veterinario /&#xa;Cirujano" vertex="1">
+          <mxGeometry height="85" width="45" x="70" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="act_lab" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff3e0;strokeColor=#f57c00;fontStyle=1;" value="Técnico de&#xa;Laboratorio" vertex="1">
+          <mxGeometry height="85" width="45" x="890" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="act_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f3e5f5;strokeColor=#7b1fa2;fontStyle=1;" value="Administrador /&#xa;Gerencia" vertex="1">
+          <mxGeometry height="85" width="45" x="890" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="act_recepcion" style="endArrow=none;html=1;" target="uc01">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="act_recepcion" style="endArrow=none;html=1;" target="uc02">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="act_recepcion" style="endArrow=none;html=1;" target="uc08">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="act_veterinario" style="endArrow=none;html=1;" target="uc03">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="act_veterinario" style="endArrow=none;html=1;" target="uc04">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="act_veterinario" style="endArrow=none;html=1;" target="uc06">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="act_veterinario" style="endArrow=none;html=1;" target="uc07">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="act_lab" style="endArrow=none;html=1;" target="uc05">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="act_admin" style="endArrow=none;html=1;" target="uc10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

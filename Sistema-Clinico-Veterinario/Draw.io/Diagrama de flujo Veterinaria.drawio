@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="e3Cq2gM1rRhhDFVxghRh">
+    <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e13;fontStyle=1;" value="Inicio" vertex="1">
+          <mxGeometry height="40" width="120" x="250" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" value="Ingresar ID Expediente&#xa;Paciente / Propietario" vertex="1">
+          <mxGeometry height="50" width="200" x="210" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" value="¿Expediente&#xa;existe?" vertex="1">
+          <mxGeometry height="70" width="140" x="240" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="p_reg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" value="CU-01: Registrar Propietario&#xa;y Mascota (RN-01)" vertex="1">
+          <mxGeometry height="50" width="200" x="480" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" value="¿Tipo de&#xa;Atención?" vertex="1">
+          <mxGeometry height="70" width="140" x="240" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="p_cg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" value="CU-03: Consulta General&#xa;+ Receta Farmacia" vertex="1">
+          <mxGeometry height="50" width="180" x="70" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="p_cir" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" value="CU-04 / CU-05: Cirugía&#xa;+ Laboratorio" vertex="1">
+          <mxGeometry height="50" width="180" x="370" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="p_costo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" value="Calcular Tarifa Polimórfica&#xa;(RN-02)" vertex="1">
+          <mxGeometry height="50" width="200" x="210" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" value="¿Requiere&#xa;Hospitalización?" vertex="1">
+          <mxGeometry height="70" width="140" x="240" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p_hosp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" value="CU-07: Internar Paciente&#xa;(RN-04)" vertex="1">
+          <mxGeometry height="50" width="200" x="490" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="d4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" value="¿Vacunas al día?&#xa;(RN-03)" vertex="1">
+          <mxGeometry height="70" width="140" x="240" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="p_vac" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" value="CU-09: Administrar Vacuna&#xa;Obligatoria" vertex="1">
+          <mxGeometry height="50" width="200" x="490" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="p_fact" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" value="CU-08: Facturación Consolidada&#xa;y Alta Médica" vertex="1">
+          <mxGeometry height="50" width="200" x="210" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="p_kpi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" value="CU-10: Actualizar KPIs&#xa;(RN-05)" vertex="1">
+          <mxGeometry height="50" width="200" x="210" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#660000;fontStyle=1;" value="Fin" vertex="1">
+          <mxGeometry height="40" width="120" x="250" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="d1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d1_no" edge="1" parent="1" source="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="p_reg" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d1_yes" edge="1" parent="1" source="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="d2" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_reg_back" edge="1" parent="1" source="p_reg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="d2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d2_cg" edge="1" parent="1" source="d2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="p_cg" value="Consulta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d2_cir" edge="1" parent="1" source="d2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="p_cir" value="Cirugía">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_cg_costo" edge="1" parent="1" source="p_cg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="p_costo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_cir_costo" edge="1" parent="1" source="p_cir" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="p_costo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_costo_d3" edge="1" parent="1" source="p_costo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="d3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d3_yes" edge="1" parent="1" source="d3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="p_hosp" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d3_no" edge="1" parent="1" source="d3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="d4" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_hosp_d4" edge="1" parent="1" source="p_hosp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="d4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d4_no" edge="1" parent="1" source="d4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="p_vac" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_d4_yes" edge="1" parent="1" source="d4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;fontColor=#000000;" target="p_fact" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_vac_fact" edge="1" parent="1" source="p_vac" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="p_fact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fact_kpi" edge="1" parent="1" source="p_fact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="p_kpi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_kpi_end" edge="1" parent="1" source="p_kpi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=classic;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
