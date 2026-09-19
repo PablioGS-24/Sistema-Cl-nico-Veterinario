@@ -32,3 +32,9 @@ SistemaVeterinario/
 ├── VS_Code/     -> Proyecto interactivo en C# (.NET) para Visual Studio Code (Program.cs)
 ├── .gitignore   -> Archivo de exclusion de archivos compilados y temporales (.class, .ctxt, bin/, obj/)
 └── README.md    -> Documentacion principal del repositorio
+
+## Video Explicativo
+
+Para ver la explicación del código en C#, consulta el siguiente enlace:
+
+* [Ver Video Demostrativo del Proyecto]: https://youtu.be/LQ_7Q9Vbk14
