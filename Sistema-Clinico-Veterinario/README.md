@@ -1,40 +1,58 @@
-# Sistema de Gestión Veterinaria - VetCare Enterprise
+# Sistema de Gestión Veterinaria - VetCare Enterprise (v2.0)
 
-Ultima actualizacion: 16 de septiembre de 2026
+**Última actualización:** 21 de octubre de 2026  
+**Curso:** Programación II  
+**Tecnologías:** C# (.NET 8.0-windows) | Windows Forms | SQLite (`Microsoft.Data.Sqlite`) | Git & GitHub
 
-Bienvenidos al repositorio de apoyo y entrega para el **Sistema de Control Clinico Veterinario** del curso de Programacion 2.
+---
 
-El objetivo principal de este repositorio es modelar e implementar un **Sistema de Control Clinico Veterinario** aplicando los principios de la Programacion Orientada a Objetos (POO) en Java utilizando el entorno **BlueJ**, asi como su solucion interactiva equivalente en C# (.NET) desarrollada para Visual Studio Code.
+## 📌 Descripción del Proyecto
 
-## Alcance Del Repositorio
+**VetCare Enterprise** es un sistema de control clínico veterinario desarrollado bajo una **arquitectura por capas (Layered Architecture)**. Esta versión (v2) evoluciona el sistema desde prototipos iniciales a una **aplicación de escritorio profesional con interfaz gráfica (Windows Forms)** y **persistencia relacional completa en base de datos SQLite**.
 
-Este repositorio contiene la documentacion metodologica y el codigo fuente en Java y C# correspondiente a la arquitectura del sistema: casos de uso, diagrama de flujo de procesos, clases del modelo POO, reglas de negocio clinicas (RN-01 a RN-05) y la interfaz para la simulacion del sistema con emision de facturas en Quetzales (Q).
+El sistema administra el flujo completo de una clínica veterinaria: registro de clientes (propietarios), expediente de pacientes (mascotas), control de esquema de vacunación, hospitalizaciones y un módulo automatizado de atención y facturación.
 
-El material privado de evaluacion docente, archivos compilados `.class`, carpetas de salida `bin/` / `obj/` y configuraciones locales no forman parte de este repositorio publico.
+---
 
-## Objetivos Del Repositorio
+## 🚀 Novedades y Requerimientos de la Versión 2.0
 
-- Aplicar Herencia y Polimorfismo mediante una clase base abstracta (`Atencion`) y sus subclases (`ConsultaGeneral` y `Cirugia`).
-- Implementar Encapsulamiento y control de estado en los objetos de negocio (`Propietario`, `Mascota`, `Hospitalizacion` y `Factura`).
-- Validar restricciones de integridad y reglas de negocio clinicas (IDs unicos RN-01, esquema vacunal obligatorio RN-03 y estadia hospitalaria RN-04).
-- Administrar colecciones dinamicas en memoria (`HashMap` en Java / `Dictionary` en C#) para la gestion de expedientes de clientes y pacientes.
-- Calcular tarifas polimorficas (RN-02) y metricas globales/KPIs de ingresos y atenciones clinicas (RN-05).
-- Facilitar la ejecucion de pruebas mediante un metodo `main` automatizado en BlueJ y una consola interactiva validada con seleccion de especie en C#.
+1. **Motor de Base de Datos SQLite:** Integración del controlador `Microsoft.Data.Sqlite` para la creación y gestión persistente de la base de datos `VetCare.db`.
+2. **Esquema Relacional de Tablas:** Definición automatizada de tablas relacionales (`Propietarios`, `Mascotas`, `Atenciones`, `Hospitalizaciones` y `Facturas`) con restricciones de integridad y llaves foráneas (`FOREIGN KEY`).
+3. **Capa DAO (Data Access Object):** Implementación de clases dedicadas para las operaciones **CRUD** (Crear, Leer, Actualizar, Eliminar) separando la lógica de datos de la interfaz visual.
+4. **Interfaz Gráfica con Windows Forms:**
+   - **`FormPrincipal`:** Menú central interactivo para la navegación entre módulos.
+   - **`FormPropietarios`:** Gestión de clientes con validación de DPI/NIT único.
+   - **`FormMascotas`:** Expediente de pacientes vinculados a su dueño y estado del esquema de vacunas.
+   - **`FormFacturacion`:** Módulo de atención médica, estancia hospitalaria ($Q45.00/\text{día}$), recargos por vacunas pendientes ($Q75.00$) e historial de comprobantes emitidos.
 
-## Estructura
+---
 
-El repositorio se encuentra organizado de la siguiente manera:
+## 📁 Estructura del Proyecto
+
+El proyecto está organizado en una arquitectura limpia y modular para facilitar su mantenimiento y escalabilidad:
 
 ```text
-SistemaVeterinario/
-├── BlueJ/       -> Proyecto Java para BlueJ (Propietario, Mascota, Atencion, ConsultaGeneral, Cirugia, Hospitalizacion, Factura, SistemaVeterinario, Main)
-├── Draw.io/     -> Diagramas UML de Casos de Uso y Diagramas de Flujo (.drawio / .xml)
-├── VS_Code/     -> Proyecto interactivo en C# (.NET) para Visual Studio Code (Program.cs)
-├── .gitignore   -> Archivo de exclusion de archivos compilados y temporales (.class, .ctxt, bin/, obj/)
-└── README.md    -> Documentacion principal del repositorio
-
-## Video Explicativo
-
-Para ver la explicación del código en C#, consulta el siguiente enlace:
-
-* [Ver Video Demostrativo del Proyecto]: https://youtu.be/LQ_7Q9Vbk14
+Sistema-Clinico-Veterinario/
+│
+├── VS_Code/                             # Proyecto Principal en C# (.NET 8.0 WinForms)
+│   ├── DAO/                             # Capa de Acceso a Datos (Lógica CRUD)
+│   │   ├── PropietarioDAO.cs            # CRUD de Clientes / Propietarios
+│   │   ├── MascotaDAO.cs                # CRUD de Pacientes / Mascotas
+│   │   └── FacturacionDAO.cs            # Consultas de Atención y Emisión de Facturas
+│   │
+│   ├── Database/                        # Configuración y Conexión a Base de Datos
+│   │   └── DatabaseHelper.cs            # Conexión SQLite y creación del esquema DDL
+│   │
+│   ├── Forms/                           # Capa de Interfaz Gráfica (Windows Forms)
+│   │   ├── FormPrincipal.cs             # Menú principal de navegación
+│   │   ├── FormPropietarios.cs          # Formulario de gestión de clientes
+│   │   ├── FormMascotas.cs              # Formulario de registro de pacientes
+│   │   └── FormFacturacion.cs           # Formulario de cobros y atención médica
+│   │
+│   ├── Program.cs / Veterinaria.cs      # Punto de entrada principal (Main)
+│   ├── VS_Code.csproj                   # Configuración del proyecto, WinForms y Paquetes NuGet
+│   └── .gitignore                       # Filtro para ignorar archivos temporales (bin, obj, .db)
+│
+├── BlueJ/                               # (Legacy) Prototipo inicial del modelo de clases en Java
+├── Draw.io/                             # Diagramas de flujo y arquitectura del sistema
+└── README.md                            # Documentación principal del repositorio
